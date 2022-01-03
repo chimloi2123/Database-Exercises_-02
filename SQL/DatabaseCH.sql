@@ -1,0 +1,55 @@
+-- CREATE DATABASE
+CREATE DATABASE HoaYeuThuong
+GO
+USE HoaYeuThuong
+GO
+
+-- CREATE TABLE
+CREATE TABLE CUAHANG(
+	MACH int primary key identity(1,1),
+	TENCH nvarchar(20) unique not null,
+)
+CREATE TABLE TT_CUAHANG(
+	MACH int primary key,
+	DIACHI_CH nvarchar(50) unique not null,
+	SDT_CH char(10) unique not null,
+	EMAIL_CH nvarchar(20) unique not null
+)
+CREATE TABLE SANPHAM_CUAHANG(
+	ID int primary key identity(1,1),
+	MASP int not null,
+	MACH int not null,
+	SLTON int not null,
+	SLBANHANG int not null, 
+
+	CONSTRAINT CHK_SLTON CHECK (SLTON >= 0)
+)
+CREATE TABLE SANPHAM(
+	MASP int primary key identity(1,1),
+	TENSP nvarchar(30) not null,
+	MOTA nvarchar(50),
+	GIABAN int not null,
+	MALOAI int not null,
+
+	CONSTRAINT CHK_GIABAN CHECK (GIABAN > 0)
+)
+CREATE TABLE LOAI(
+	MALOAI int primary key identity(1,1),
+	TENLOAI nvarchar(20) unique not null
+)
+-- FK CONSTRAINT
+ALTER TABLE SANPHAM
+ADD CONSTRAINT FK_LOAI_SANPHAM
+FOREIGN KEY (MALOAI) REFERENCES LOAI(MALOAI)
+
+ALTER TABLE SANPHAM_CUAHANG
+ADD CONSTRAINT FK_SPCH_SP
+FOREIGN KEY (MASP) REFERENCES SANPHAM(MASP)
+
+ALTER TABLE SANPHAM_CUAHANG
+ADD CONSTRAINT FK_SPCH_CH
+FOREIGN KEY (MACH) REFERENCES CUAHANG(MACH)
+
+ALTER TABLE TT_CUAHANG
+ADD CONSTRAINT FK_TTCH_CH
+FOREIGN KEY (MACH) REFERENCES CUAHANG(MACH)
