@@ -1,0 +1,3 @@
+Chưa giải quyết:
+- Khóa ngoại vào candidate key
+- Partition CT_GIAOHANG.NGAYGIAO theo tháng
