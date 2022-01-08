@@ -1,0 +1,32 @@
+Yêu cầu:
+1> Phân tích, tổng hợp, thực hành các kỹ năng làm việc nhóm trong hoạt động
+thiết kế CSDL quan hệ theo nhóm.
+2>Cải thiện hiệu quả truy vấn dựa trên thiết kế đề xuất, source code của project mô phỏng các chức năng, source script
+tạo csdl, query, index, partition
+3> Tư duy phê phán sáng tạo trong thiết kế CSDL 
+
+Phần cần tập trung:
+	+ Truy vấn
+	+ Trigger
+	+ Index
+	+ Proc
+	+ Lập trình mô phỏng hệ thống (càng nhiều chức năng càng tốt)
+=> Cần được cải thiện tối ưu nhất có thể
+
+*Chú ý: Có quay video thảo luận up drive
+
+Phân công: ~ Giai đoạn 1:
+	Giai đoạn 1: mô tả quy trình, dữ liệu, ràng buộc liên quan, danh sách chức
+	năng cần xây dựng kèm tần suất giao dịch tương ứng (thông tin tần suất
+	sinh viên tự quan sát, phân tích và đề xuất)
+	
+	Tiến: Mô tả các quy trình nghiệp vụ online
+	Trâm Anh: Mô tả các quy trình nghiệp vụ offline
+	Lãm: Tạo mô hình ERD
+	Khoa: Chuyển mô hình ERD-> mô hình csdl
+=> Khoa, Lãm tự chia các phân hệ để làm
+	Chị Thảo: Lập danh sách chức năng cần xây dựng + tần suất giao dịch tương ứng
+
+Họp lần 1:
+	+ Bổ sung, sửa chữa các quy trình trên
+	
