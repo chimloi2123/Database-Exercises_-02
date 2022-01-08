@@ -50,7 +50,7 @@ namespace QLyDatHang
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QLyDatHang.Properties.Resources.Rectangle;
+            this.pictureBox1.Image = global::QLyDatHang.Properties.Resources.pexels_agnese_lunecka_3671650;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;

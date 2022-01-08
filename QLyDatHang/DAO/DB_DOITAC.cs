@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using DTO;
+
 using Dapper;
 using System.Windows.Forms;
 namespace DAO
@@ -16,7 +16,7 @@ namespace DAO
         {
            
             DBConnect _dbContext = new DBConnect();
-            SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, pass);
+            SqlConnection _dbConnection = _dbContext.creatsqlconnection();
             SqlCommand command = new SqlCommand("select * from XemTTDOITAC()", _dbConnection);
             DataTable dt = new DataTable();
             using (SqlDataReader reader = command.ExecuteReader())
@@ -41,7 +41,7 @@ namespace DAO
         {
 
             DBConnect _dbContext = new DBConnect();
-            SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, pass);
+            SqlConnection _dbConnection = _dbContext.creatsqlconnection();
             SqlCommand command = new SqlCommand("select * from DOITAC", _dbConnection);
             DataTable dt = new DataTable();
             using (SqlDataReader reader = command.ExecuteReader())
@@ -70,7 +70,7 @@ namespace DAO
             try
             {
                 //string sscore;
-                SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, pass);
+                SqlConnection _dbConnection = _dbContext.creatsqlconnection();
                 SqlCommand command = new SqlCommand("declare @message nvarchar(50)  exec sp_XemDTTheoMa '" + madt + "',@message", _dbConnection);
                 DataTable dt = new DataTable();
                 DataTable dtAll = new DataTable();
@@ -130,7 +130,7 @@ namespace DAO
            
             try
             {
-                SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, password);
+                SqlConnection _dbConnection = _dbContext.creatsqlconnection();
                 string stringSql = "insert into DOITAC ([MADT],[PASS],[SOCHINHANH],[TENDT],[NGUOIDAIDIEN],[THANHPHO],[DIACHIKD],[SDT],[EMAIL]) VALUES('" +
                      ma + "','" + pass + "'," + socn + ",N'" + tendt + "',N'" + nguoidd + "',N'" + thanhpho + "',N'" + diachikd + "',N'" + sdt + "','" + email + "')";
                 string stringproc = "exec sp_ThemDT '" +

@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using DTO;
+
 using System.Windows.Forms;
 namespace DAO
 {
-    public  class DB_LOGIN
+    public class DB_LOGIN
     {
-        public DataTable connect(string acc, string pass)
+        public static DataTable connect(string acc, string pass)
         {
-            string t = "exec sp_login '" + acc + "' ,'" + pass + "'";
-            
+            string t = "SELECT * FROM NHANVIEN WHERE MANV= '" + acc + "' AND MATKHAU= '" + pass + "'";
             return DataProvider.Instance.ExecuteQuery(t);
         }
     }

@@ -93,11 +93,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{21b47f91-c3d7-4318-8a3b-6225446ea8ae}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

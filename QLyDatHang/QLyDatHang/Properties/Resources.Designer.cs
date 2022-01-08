@@ -113,6 +113,36 @@ namespace QLyDatHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pexels_agnese_lunecka_3671650 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-agnese-lunecka-3671650", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_evie_shaffer_3014451 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-evie-shaffer-3014451", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_karolina_grabowska_4622976 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-karolina-grabowska-4622976", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Rectangle {
             get {
                 object obj = ResourceManager.GetObject("Rectangle", resourceCulture);

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using DTO;
+
 using Dapper;
 using System.Data;
 using System.Windows.Forms;
@@ -15,7 +15,7 @@ namespace DAO
         public static DataTable getdsSPDoiTac(string username, string pass)
         {
             DBConnect _dbContext = new DBConnect();
-            SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, pass);
+            SqlConnection _dbConnection = _dbContext.creatsqlconnection();
             SqlCommand command = new SqlCommand("select * from sanpham_doitac", _dbConnection);
             DataTable dt = new DataTable();
             using (SqlDataReader reader = command.ExecuteReader())
@@ -41,7 +41,7 @@ namespace DAO
             try
             {
                 DBConnect _dbContext = new DBConnect();
-                SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, password);
+                SqlConnection _dbConnection = _dbContext.creatsqlconnection();
                 SqlCommand command = new SqlCommand("exec sp_DoiSLTonSP_DT " + masp + ", '" + madt + "'," + slton, _dbConnection);
                 // DataTable dt = new DataTable();
                 command.ExecuteNonQuery();
@@ -58,7 +58,7 @@ namespace DAO
             try
             {
                 DBConnect _dbContext = new DBConnect();
-                SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, password);
+                SqlConnection _dbConnection = _dbContext.creatsqlconnection();
                 SqlCommand command = new SqlCommand("exec sp_DoiSLDHSP_DT " + masp + ", '" + madt + "'," + sldh, _dbConnection);
                 // DataTable dt = new DataTable();
                 command.ExecuteNonQuery();
@@ -73,7 +73,7 @@ namespace DAO
         public static DataTable getdsSPDoiTac_DT(string username, string pass)
         {
             DBConnect _dbContext = new DBConnect();
-            SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, pass);
+            SqlConnection _dbConnection = _dbContext.creatsqlconnection();
             SqlCommand command = new SqlCommand("select * from sanpham_doitac where madt='"+username+"'", _dbConnection);
             DataTable dt = new DataTable();
             using (SqlDataReader reader = command.ExecuteReader())
@@ -97,7 +97,7 @@ namespace DAO
         public static DataTable TimKiemSPTheoDT(string username, string pass,string maDT)
         {
             DBConnect _dbContext = new DBConnect();
-            SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, pass);
+            SqlConnection _dbConnection = _dbContext.creatsqlconnection();
             SqlCommand command = new SqlCommand("exec sp_XemSPTheoDT '" + maDT + "'", _dbConnection);
             DataTable dt = new DataTable();
             using (SqlDataReader reader = command.ExecuteReader())
@@ -121,7 +121,7 @@ namespace DAO
         public static DataTable TimKiemSPTheoTen(string username, string pass, string tensp)
         {
             DBConnect _dbContext = new DBConnect();
-            SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, pass);
+            SqlConnection _dbConnection = _dbContext.creatsqlconnection();
             SqlCommand command = new SqlCommand("exec sp_XemTheoTen '" + tensp + "'", _dbConnection);
             DataTable dt = new DataTable();
             using (SqlDataReader reader = command.ExecuteReader())

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using DTO;
+
 namespace DAO
 {
     public class DB_CT_DONHANG
@@ -14,7 +14,7 @@ namespace DAO
         public static DataTable XemDSCTDH_KH(string username, string password)
         {
             DBConnect _dbContext = new DBConnect();
-            SqlConnection _dbConnection = _dbContext.creatsqlconnection(username, password);
+            SqlConnection _dbConnection = _dbContext.creatsqlconnection();
             SqlCommand command = new SqlCommand(" SELECT * FROM XemCTDHAll()", _dbConnection);
             DataTable dt = new DataTable();
             using (SqlDataReader reader = command.ExecuteReader())
