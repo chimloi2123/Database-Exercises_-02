@@ -1,0 +1,49 @@
+Yêu cầu:
+1> Phân tích, tổng hợp, thực hành các kỹ năng làm việc nhóm trong hoạt động
+thiết kế CSDL quan hệ theo nhóm.
+2>Cải thiện hiệu quả truy vấn dựa trên thiết kế đề xuất, source code của project mô phỏng các chức năng, source script
+tạo csdl, query, index, partition
+3> Tư duy phê phán sáng tạo trong thiết kế CSDL 
+
+Phần cần tập trung:
+	+ Truy vấn
+	+ Trigger
+	+ Index
+	+ Proc
+	+ Lập trình mô phỏng hệ thống (càng nhiều chức năng càng tốt)
+=> Cần được cải thiện tối ưu nhất có thể
+
+*Chú ý: Có quay video thảo luận up drive
+
+Phần cần tập trung:
+	+ Truy vấn
+	+ Trigger
+	+ Index
+	+ Proc
+	+ Lập trình mô phỏng hệ thống (càng nhiều chức năng càng tốt)
+=> Cần được cải thiện tối ưu nhất có thể
+
+*Chú ý: Có quay video thảo luận up drive
+
+Phân công: ~ Giai đoạn 2:
+	Giai đoạn 1: bảng thiết kế cơ sở dữ liệu từ mức quan niệm  vật lý theo
+	đề xuất của nhóm, các đề xuất về cải thiện hiệu quả truy vấn dựa trên thiết
+	kế đề xuất, source code của project mô phỏng các chức năng, source script
+	tạo csdl, query, index, partition.... Có sử dụng.
+	
+	Mọi người làm các quy trình đã được phân công ở giai đoạn 1 để làm các công việc sau:
+	Deadline lần 1(ngày 17): Chuyển từ mức quan niệm lên mức logic
+	=> sau đó tổng hợp lại để đưa lên mức vật lý
+	
+	Deadline lần 2(ngày 21): Thực hiện thử nghiệm với các câu truy vấn với giả định tần suất lớn. Quan 
+	 		    sát thực nghiệm và đề xuất giải pháp cải thiện hiệu quả truy xuất
+	
+	Deadline lần 3(ngày 25): Lập trình mô phỏng hệ thống.
+
+Họp lần 1:
+	+ Ngày 17 (tổng hợp các lược đồ quan hệ để nạp vào DBMS)
+	+ Ngày 21 (đánh giá truy vấn query, index, partition.... Có sử dụng)
+	+ Ngày 25 (tổng hợp)
+
+=> Tất cả source code đều đưa lên link github: https://github.com/chimloi2123/Database-Exercises_-02.git
+	
