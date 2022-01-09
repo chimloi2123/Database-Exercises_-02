@@ -150,3 +150,15 @@ create proc TinhDonNVThuKho @maNV int, @error varchar(50) out
   commit tran
 
 --Proceduce tính doanh số theo mã nhân viên
+
+drop proc TinhDoanhSo
+create proc TinhDoanhSo @maNV int, @error varchar(50) out
+  as
+  begin tran
+		begin
+				Select  ddh.MANVLAP, SUM(SOLUONG) AS DOANHSO
+				FROM DONDATHANG ddh JOIN CT_DONDATHANG ctdh ON  ctdh.MADH = ddh.MADH
+				WHERE MANVLAP = @maNV
+				GROUP BY ddh.MANVLAP
+		end
+  commit tran
