@@ -1,66 +1,55 @@
-use HoaYeuThuong
+﻿use HoaYeuThuong
+
+select * from SANPHAM_CUAHANG
+
+
 
 go
-
-create proc sp_XemSLTonSP
-	@MACH int
+alter proc sp_TaoDonNhap
+	@MANCC int,
+	@MACH int,
+	@NgayLap datetime,
+	@NgayNhan datetime,
+	@NVLAP int
 as
 begin tran
-	Select * from SANPHAM_CUAHANG where MACH = @MACH
+	begin try
+		if not exists (select * from NHACUNGCAP where MANCC = @MANCC)
+			return N'Mã nhà cung cấp không tồn tại'
+		if not exists (select * from NHANVIEN where MANV = @NVLAP)
+			return N'Mã nhân viên không tồn tại'
+		if @NgayLap < GETDATE() - 1
+			return N'Ngày lập không hợp lệ'
+		if @NgayNhan < GETDATE()
+			return N'Ngày nhận không hợp lệ'
+		insert into DONNHAPHANG values (@MANCC, @MACH, @NgayLap, 0, @NgayNhan, @NVLAP)
+	end try
+	begin catch
+		rollback tran
+		return N'LỖI HỆ THỐNG'
+	end catch
 commit tran
+return ''
 
 go
-
-create proc sp_XemCTNhapHang
-	@MADNH int
+alter proc sp_CapNhatDonNhap
+	@ID int,
+	@MANCC int,
+	@NgayLap datetime,
+	@NgayNhan datetime,
+	@NVLAP int
 as
 begin tran
-	Select * from CT_DONNHAP where MADNH = @MADNH
+	begin try
+		if not exists (select * from NHACUNGCAP where MANCC = @MANCC)
+			return N'Mã nhà cung cấp không tồn tại'
+		if not exists (select * from NHANVIEN where MANV = @NVLAP)
+			return N'Mã nhân viên không tồn tại'
+		update DONNHAPHANG set MANCC = @MANCC, NGAYLAP = @NgayLap, NGAYNHANDUKIEN = @NgayNhan, NVLAP = @NVLAP where MADNH = @ID
+	end try
+	begin catch
+		rollback tran
+		return N'LỖI HỆ THỐNG'
+	end catch
 commit tran
-
-go
-
-create proc sp_XemCTGiaoHang
-	@MADGH int
-as
-begin tran
-	Select * from CT_GIAOHANG where MADGH = @MADGH
-commit tran
-
-go
-
-create proc sp_XemSanPhamBanChay 
-as
-begin tran
-	Select MASP, SUM(SOLUONG) as TONGSOBAN
-	From CT_DONDATHANG
-	Group by MASP
-	Order by TONGSOBAN desc
-	--LIMIT 20
-commit
-
-go
-
-create proc sp_XemSanPhamBanCham
-as
-begin tran
-	Select MASP, SUM(SOLUONG) as TONGSOBAN
-	From CT_DONDATHANG
-	Group by MASP
-	Order by TONGSOBAN
-	--LIMIT 20
-commit
-
-go
-
-
-create proc sp_XemTongSoLuongHang
-as
-begin tran
-	Select sp.MASP, sp.TENSP, SUM(sc.SLTON)
-	From SANPHAM sp, SANPHAM_CUAHANG sc
-	Where sp.MASP = sc.MASP
-	Group by sp.MASP, sp.TENSP
-commit
-
-go
+return ''
