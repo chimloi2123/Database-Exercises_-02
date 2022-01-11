@@ -123,7 +123,7 @@ namespace QuanTri
             // 
             // pnlChildForm
             // 
-            this.pnlChildForm.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(250, 0);
             this.pnlChildForm.Name = "pnlChildForm";

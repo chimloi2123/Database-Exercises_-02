@@ -140,7 +140,7 @@ namespace QuanTri
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("Thêm thành công.");
+                MessageBox.Show("Cập nhật thành công.");
 
                 clearInput();
                 display();
