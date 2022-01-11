@@ -161,5 +161,10 @@ namespace QuanTri
             dataGridView.DataSource = dt;
             con.Close();
         }
+
+        private void SanPham_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,7 +42,8 @@ namespace QuanTri
             // 
             // panelSideMenu
             // 
-            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(42)))), ((int)(((byte)(74)))));
+            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panelSideMenu.BackgroundImage = global::QuanTri.Properties.Resources.Untitled_2;
             this.panelSideMenu.Controls.Add(this.btnExit);
             this.panelSideMenu.Controls.Add(this.btnAccMan);
             this.panelSideMenu.Controls.Add(this.btnSanPham);
@@ -55,7 +56,7 @@ namespace QuanTri
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Silver;
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Location = new System.Drawing.Point(12, 632);
             this.btnExit.Name = "btnExit";
@@ -67,43 +68,48 @@ namespace QuanTri
             // 
             // btnAccMan
             // 
+            this.btnAccMan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnAccMan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAccMan.FlatAppearance.BorderSize = 0;
             this.btnAccMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccMan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAccMan.Location = new System.Drawing.Point(0, 170);
+            this.btnAccMan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnAccMan.Location = new System.Drawing.Point(0, 210);
             this.btnAccMan.Name = "btnAccMan";
             this.btnAccMan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAccMan.Size = new System.Drawing.Size(250, 45);
             this.btnAccMan.TabIndex = 2;
             this.btnAccMan.Text = "Lịch sử sản phẩm";
             this.btnAccMan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccMan.UseVisualStyleBackColor = true;
+            this.btnAccMan.UseVisualStyleBackColor = false;
             this.btnAccMan.Click += new System.EventHandler(this.btnAccMan_Click);
             // 
             // btnSanPham
             // 
+            this.btnSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSanPham.FlatAppearance.BorderSize = 0;
             this.btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSanPham.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSanPham.Location = new System.Drawing.Point(0, 125);
+            this.btnSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSanPham.Location = new System.Drawing.Point(0, 165);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSanPham.Size = new System.Drawing.Size(250, 45);
             this.btnSanPham.TabIndex = 1;
             this.btnSanPham.Text = "Sản phẩm";
             this.btnSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.UseVisualStyleBackColor = true;
+            this.btnSanPham.UseVisualStyleBackColor = false;
             this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // panelLogo
             // 
+            this.panelLogo.BackColor = System.Drawing.Color.Transparent;
+            this.panelLogo.BackgroundImage = global::QuanTri.Properties.Resources.Flower;
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelLogo.Controls.Add(this.lblNoti);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 125);
+            this.panelLogo.Size = new System.Drawing.Size(250, 165);
             this.panelLogo.TabIndex = 0;
             // 
             // lblNoti
@@ -117,6 +123,7 @@ namespace QuanTri
             // 
             // pnlChildForm
             // 
+            this.pnlChildForm.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(250, 0);
             this.pnlChildForm.Name = "pnlChildForm";
