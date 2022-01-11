@@ -47,12 +47,13 @@ namespace QuanTri
             // 
             // btnNhap
             // 
+            this.btnNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnNhap.Location = new System.Drawing.Point(35, 206);
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.Size = new System.Drawing.Size(180, 80);
             this.btnNhap.TabIndex = 0;
             this.btnNhap.Text = "Lịch sử nhập";
-            this.btnNhap.UseVisualStyleBackColor = true;
+            this.btnNhap.UseVisualStyleBackColor = false;
             this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
             // 
             // groupBox2
@@ -68,12 +69,13 @@ namespace QuanTri
             // 
             // btnXuat
             // 
+            this.btnXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnXuat.Location = new System.Drawing.Point(35, 323);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(180, 80);
             this.btnXuat.TabIndex = 1;
             this.btnXuat.Text = "Lịch sử xuất";
-            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.UseVisualStyleBackColor = false;
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // tbMa
@@ -142,6 +144,7 @@ namespace QuanTri
             // 
             // dataGridView
             // 
+            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(19, 206);
             this.dataGridView.Name = "dataGridView";
@@ -154,6 +157,7 @@ namespace QuanTri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1012, 673);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
